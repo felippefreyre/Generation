@@ -1,0 +1,39 @@
+fun main(){
+    println("Bem Vindo a Calculadora")
+    println("1 - Adição")
+    println("2 - Subtração")
+    println("3 - Multiplicação")
+    println("4 - Divisão")
+
+  println("Por Favor Digite o numero correspondente a operação o que fazer: ")
+  val opcao = readln().toInt()
+
+  print("\n Digite o 1 numero:")
+    val num1 = readln().toDouble()
+
+  print("Digite o 2 numero:")
+  val num2 = readln().toDouble()
+
+  println("Digite o 3 numero:")
+  val num3 = readln().toDouble()
+
+  println("Digite o 3 numero:")
+  val num4 = readln().toDouble()
+
+ when(opcao){
+
+     1-> {
+         println("Total soma: ${soma(num1,num2)}")
+     }
+     2-> {
+         println("Total da subtração: ${subtracao(num1,num2)}")
+     }
+     3-> println("Total da multiplicação: ${multiplicacao(num1,num2)}")
+     {
+     4-> println("Total da divisão: ${divisao(num1,num2)}")
+     }
+
+     else -> {
+         println("Opção Invalida")
+     }
+ }
