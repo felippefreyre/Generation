@@ -6,4 +6,10 @@ data class Categoria (
         var Tarefas: List<Tarefa>
         ){
 
+        override fun toString(): String {
+                return descricao!!
+        }
+
+
+
 }

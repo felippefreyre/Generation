@@ -9,6 +9,7 @@ import com.generation.todoapplication.Api.Repository
 import com.generation.todoapplication.model.Categoria
 import kotlinx.coroutines.launch
 import retrofit2.Response
+import java.time.LocalDate
 
 class MainViewModel : ViewModel() {
 
@@ -23,8 +24,10 @@ class MainViewModel : ViewModel() {
     val myCategoriaResponse: LiveData<Response<List<Categoria>>> =
         _myCategoriaResponse
 
+    val dataSelecionada = MutableLiveData<LocalDate>()
+
     init {
-        listCaregoria()
+        //listCaregoria()
     }
 
     fun listCaregoria(){
