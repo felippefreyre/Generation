@@ -1,6 +1,7 @@
 package com.generation.todoapplication.Api
 
 import com.generation.todoapplication.model.Categoria
+import com.generation.todoapplication.model.Tarefa
 import retrofit2.Response
 
 class Repository {
@@ -9,4 +10,8 @@ class Repository {
         return RetrofitInstance.api.listCategoria()
     }
 
+
+    suspend fun addTarefa(tarefa: Tarefa): Response<Tarefa>{
+      return RetrofitInstance.api.addTarefa(tarefa)
+    }
 }
