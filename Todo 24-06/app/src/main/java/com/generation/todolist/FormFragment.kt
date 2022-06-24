@@ -11,6 +11,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.generation.todolist.adapter.TarefaAdapter
 import com.generation.todolist.databinding.FragmentFormBinding
 import com.generation.todolist.databinding.FragmentListBinding
 import com.generation.todolist.fragment.DatePickerFragment
@@ -36,6 +37,7 @@ class FormFragment : Fragment(), TimePickerListener {
         carregarDados()
 
         mainViewModel.listCategoria()
+        val adapter = TarefaAdapter(This,mainViewModel,resquireContext())
 
         mainViewModel.dataSelecionada.value = LocalDate.now()
 

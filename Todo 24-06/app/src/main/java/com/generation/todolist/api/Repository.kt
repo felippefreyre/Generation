@@ -3,6 +3,7 @@ package com.generation.todolist.api
 import com.generation.todolist.model.Categoria
 import com.generation.todolist.model.Tarefa
 import retrofit2.Response
+import java.time.ZoneId
 
 class Repository {
 
@@ -20,5 +21,10 @@ class Repository {
     suspend fun updateTerafa(tarefa: Tarefa): Response<Tarefa>{
         return RetrofitInstance.api.updateTarefa(tarefa)
     }
+
+    suspend fun deleteTarefa(id:Long) : Response<Tarefa>{
+        return RetrofitInstance.api.deleteTarefa(id)
+    }
+
 
 }
